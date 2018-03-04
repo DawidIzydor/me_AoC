@@ -40,6 +40,34 @@ int stringToInt(std::string& input)
 }
 ```
 
+## stringExplode
+
+```c++
+// function that takes a string and then
+// splits it into pieces
+// similar to PHP's explode() fucntion
+std::vector<std::string> stringExplode(std::string& str, char what = ' ')
+{
+	std::vector<std::string> words;
+	std::string tempStr;
+
+	for (int i = 0; i < str.size(); ++i)
+	{
+		if (str[i] != what)
+		{
+			tempStr += str[i];
+		}
+		else {
+			words.push_back(tempStr);
+			tempStr = "";
+		}
+	}
+	words.push_back(tempStr);
+
+	return words;
+}
+```
+
 ## Empty main
 These headers are used in almost every app here
 ```c++
