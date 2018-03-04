@@ -53,7 +53,7 @@ std::vector<std::string> stringExplode(std::string& str, char what = ' ')
 
 	for (int i = 0; i < str.size(); ++i)
 	{
-		if (str[i] != ' ')
+		if (str[i] != what)
 		{
 			tempStr += str[i];
 		}
