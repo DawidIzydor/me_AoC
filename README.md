@@ -40,6 +40,32 @@ int stringToInt(std::string& input)
 }
 ```
 
+## Empty main
+These headers are used in almost every app here
+```c++
+#include <iostream>
+#include <vector>
+#include <map>
+#include <string>
+#include <limits>
+#include <fstream>
+
+#ifdef _WIN32
+#include <cstdlib>
+#endif // _WIN32
+
+int main()
+{
+
+
+#ifdef _WIN32
+	system("PAUSE");
+#endif // _WIN32
+    return 0;
+}
+
+```
+
 ## ```hash<Point>()```
 Hash for 2D Point struct  (see https://github.com/DawidIzydor/me_HashNrsOptimizer)
 ```c++
